@@ -1,7 +1,6 @@
 package Leetcode.Trees;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class ConstructBinaryTree {
     int index = 0;
@@ -25,7 +24,7 @@ public class ConstructBinaryTree {
         return dfs(0, preorder.length - 1, map);
     }
 
-    TreeNode dfs(int left, int right, Map map) {
+    TreeNode dfs(int left, int right, HashMap<Integer, Integer> map) {
         int currValue = preorder[index++];
         int currIndex = (int) map.get(currValue);
         TreeNode root = new TreeNode(currValue);
